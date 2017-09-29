@@ -1,0 +1,281 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Orchejs - Enhance your APIs</title>
+
+		<meta name="description" content="Enhance you APIs in Nodejs with Orche">
+		<meta name="author" content="Mauricio Gemelli Vigolo">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+		
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css">
+		<link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css">
+		
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+		<link rel="stylesheet" href="css/orche-custom.css">
+
+		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<!-- Logo Inicio -->
+				<section>
+					<img src="./imgs/logo.png" style="background: transparent; border:0; border-color: transparent; width: 400px; box-shadow: none">
+					<p style="margin-top: 50px;">
+						<font style="color:#00ff00; font-weight:bold; font-size: 1em; width: 100%; text-align: right; display: block">REST APIs em Nodejs</font>
+					</p>
+					<p style="margin-top: 50px;">
+							<small>disponível em: <a>https://github.com/mauriciovigolo/ftsl-2017</a></small>
+					</p>					
+				</section>
+
+				<!-- Who am I? -->
+				<section>
+					<h2></h2>
+					<p>
+						<font style="color:#00ff00; font-size: 1.2em; font-weight: bold;">Mauricio Gemelli Vigolo</font>
+					</p>
+					<p style="margin-top: 70px;">
+						<a href="https://github.com/mauriciovigolo" style="color:white;"><i class="fa fa-github" aria-hidden="true"></i></a>
+						<a href="https://www.linkedin.com/in/mauricio-gemelli-vigolo-65487727/" style="color:white;"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
+						<a href="https://twitter.com/mauriciovigolo" style="color:white;"><i class="fa fa-twitter" aria-hidden="true"></i></a>						
+						<font style="color:#42affa">mauriciovigolo</font>
+					</p>
+				</section>
+
+				<!-- Sobre o projeto -->
+				<section>
+					<h2 class="sectionHeader">Sobre o projeto:</h2>
+					<section>					
+						<h2>
+							O que é?
+						</h2>		
+					</section>
+					<section>
+						Bibliotecas para desenvolvimento de APIs em Nodejs.
+					</section>
+					<section>
+						<img src="./imgs/orche-ecosystem.png" style="background: transparent; border:0; border-color: transparent; box-shadow: none" />
+					</section>					
+				</section>				
+				<section>
+					<h2 class="sectionHeader">Objetivos do projeto:</h2>				
+					<section>
+						<li class="fragment fade-up">Framework para construção de APIs.</li>
+						<li class="fragment fade-up">Não focado em uma única tecnologia ou metodologia.</li>
+						<li class="fragment fade-up">Bibliotecas maduras / estáveis para desenvolvimento em Nodejs.</li>
+					</section>
+					<section>
+						<li class="fragment fade-up">Aplicações escaláveis.</li>
+						<li class="fragment fade-up">Opções de estrutura do projeto, porém sem rigidez.</li>
+						<li class="fragment fade-up">Camada leve, para manter o desempenho das bibliotecas utilizadas.</li>
+					</section>
+					<section>
+						<li class="fragment fade-up">Baixa curva de aprendizado.</li>
+						<li class="fragment fade-up">Maior produtividade.</li>
+					</section>
+				</section>
+
+				<!-- Desenvolvimento Nodejs -->
+				<section>
+					<h2 class="sectionHeader">Desenvolvimento REST em Nodejs - Padrão</h2>
+					<section>
+						<p>
+							Situação prática: Preciso criar um novo projeto backend para as APIs do sorteio das camisetas.
+						</p>
+						<p class="fragment">
+							Quero utilizar o Nodejs, <font class="fragment" style="color:#00ff00">por onde começar?</font>
+						</p>
+					</section>
+					<section>
+						<p>
+							Escolha do framework:
+						</p>
+						<div class="fragment" style="background: #fff; border-radius: 20px;">
+							<img src="./imgs/express.png" style="width:230px; border:0; border-color: transparent; box-shadow: none"/>
+							<img src="./imgs/hapi.png" style="width:230px; border:0; border-color: transparent; box-shadow: none"/>
+							<img src="./imgs/koajs.png" style="width:230px; border:0; border-color: transparent; box-shadow: none"/>
+							<img src="./imgs/restify.png" style="width:130px; border:0; border-color: transparent; box-shadow: none"/>
+						</div>
+						<p class="fragment">
+							Pela popularidade, comunidade e uso: <font class="fragment" style="color:#00ff00">express.</font>
+						</p>
+					</section>
+					<section>
+						<p>
+							Criar projeto e CRUD de usuários.
+						</p>
+					</section>
+					<section>
+						<p>
+							Let's code!
+						</p>						
+						<img src="./imgs/waynes.jpg" style="background: transparent; border:0; border-color: transparent; box-shadow: none"/>
+					</section>
+					<section>
+						<p>
+							As bibliotecas mencionadas anteriormente, atendem perfeitamente a necessidade, porém:
+						</p>
+					</section>
+					<section>
+						<li class="fragment">Como estruturar melhor minha aplicação, quando ela começa a crescer?</li>
+						<li class="fragment">Qual a melhor estrutura de pastas?</li>
+						<li class="fragment">Como organizar melhor minhas rotas?</li>
+						<li class="fragment">Como melhor trabalhar com as validações?</li>
+						<li class="fragment">Devo ter uma camada intermediária para conter as regras de negócios?</li>
+					</section>
+					<section>
+						<p>E se eu utilizar uma solução mais completa como Sails ou Meteor?</p>
+					</section>
+				</section>
+				<section>
+					<h2 class="sectionHeader">Desenvolvimento REST em Nodejs - Orchejs</h2>
+					<section>
+						<p>
+							Desenvolvimento do mesmo projeto de APIs do sorteio das camisetas com Orchejs.
+						</p>
+						<p class="fragment">
+							O que o Orchejs REST oferece para solucionar os problemas apontados anteriormente?
+						</p>
+					</section>
+					<section>
+						<li class="fragment">Typescript - checagem estática de código, classes e interfaces.</li>
+						<li class="fragment">A estrutura de pastas pode ser definida de acordo com a equipe - features | por tipos</li>
+						<li class="fragment">Carregamento das rotas fica facilitado devido o uso de decorators: @Route</li>
+					</section>
+					<section>
+						<li class="fragment">As validações são realizadas de forma assíncrona pelos validators.</li>
+						<li class="fragment">O log da biblioteca pode ser usado pela aplicação.</li>
+						<li class="fragment">Classes genéricas para Request e Response</li>
+					</section>
+					<section>
+						<p>
+							Let's code!
+						</p>						
+						<img src="./imgs/waynes.jpg" style="background: transparent; border:0; border-color: transparent; box-shadow: none"/>
+					</section>
+				</section>
+				<section>
+					<h2 class="sectionHeader">Recapitulando:</h2>
+					<section data-markdown>
+						<script type="text/template">
+							- Criação dos endpoints com @Route em conjunto com os HTTP Methods: @Get, @Post, @Put, @Delete,.. 
+								```js
+								@Route('users')
+								export class UserRs {
+									@Get(':uuid')
+									getUser(@PathParam('uuid') uuid): User {
+										...
+									}
+								}
+								```
+						</script>
+					</section>
+					<section data-markdown>
+							<script type="text/template">
+								- Interceptors: Possível fazer um tratamento ou cancelar requisição.
+								```js
+								@Interceptor('users/:uuid')
+								export class AuthenticationInterceptor {
+									@Processing()
+									evaluate(
+										@ResponseParam() res: Response, 
+										@HeaderParam('authentication') token
+									) {
+										logger.info('Token: ' + token);
+										// res...
+									}
+								}
+								```
+							</script>
+					</section>
+					<section data-markdown>
+							<script type="text/template">
+								- Validações que são realizadas de forma assíncrona. Possível adicionar diretamente no parâmetro ou propriedade do objeto.
+							</script>
+					</section>
+					<section data-markdown>
+							<script type="text/template">
+								```js
+								@Get(':uuid')
+								getUser(
+									@PathParam('uuid', {
+										validators: [
+										{ 
+											validator: PatternValidator, 
+											parameters: /^[a-z0-9]+$/i 
+										}
+									]}) uuid
+								): User {
+									const user: User = new User();
+									user.uuid = uuid;
+									return user;
+								}
+								```
+								Link projeto github: [@orchejs/validators](https://github.com/orchejs/validators).
+							</script>
+					</section>
+					<section data-markdown>
+							<script type="text/template">
+							- Requests: RequestParamMapper - Pega os valores de request.params e request.query e faz o carregamento em um único objeto.
+							- Responses: GenericResponse, PagedResponse, ErrorResponse
+							</script>
+					</section>
+				</section>
+				<section>
+						<h2 class="sectionHeader">Próximos Passos</h2>
+						<section>
+								<img src="./imgs/project-future.png" style="background: transparent; border:0; border-color: transparent; box-shadow: none"/>
+						</section>
+				</section>
+				<section>
+						<h2 class="sectionHeader">Turma Orche...</h2>
+						<section>
+								<img src="./imgs/family.jpeg" style="background: transparent; border:0; border-color: transparent; box-shadow: none; width: 500px"/>
+						</section>
+				</section>
+				<section>
+						<h2 class="sectionHeader">Dúvidas</h2>
+						<section>
+							<li style="list-style: none;"><a href="http://twitter.com/mauriciovigolo">@mauriciovigolo</a></li>
+							<li style="list-style: none;"><a href="http://twitter.com/orchejs">@orchejs</a></li>
+							<li style="list-style: none;"><a href="https://github.com/mauriciovigolo">https://github.com/mauriciovigolo</a></li>
+						</section>
+				</section>				
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>

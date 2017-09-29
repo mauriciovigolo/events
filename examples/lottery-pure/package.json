@@ -1,0 +1,22 @@
+{
+  "name": "lottery-pure",
+  "version": "1.0.0",
+  "description": "Example of the lottery APIs using pure Expressjs",
+  "main": "index.js",
+  "scripts": {
+    "test": ""
+  },
+  "keywords": [
+    "Lottery APIs",
+    "Express application",
+    "Orchejs example with pure javascript and Express"
+  ],
+  "author": "Mauricio Gemelli Vigolo",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.15.5",
+    "moment": "^2.18.1",
+    "mongoose": "4.10.8"
+  }
+}

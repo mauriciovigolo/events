@@ -1,0 +1,51 @@
+Arguments: 
+  /usr/local/bin/node /usr/local/bin/yarn add @orche/rest express body-parser
+
+PATH: 
+  /usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
+
+Yarn version: 
+  0.27.5
+
+Node version: 
+  6.11.0
+
+Platform: 
+  darwin x64
+
+npm manifest: 
+  {
+    "name": "lottery-orchejs",
+    "version": "1.0.0",
+    "description": "Example of the lottery APIs using Orchejs",
+    "main": "index.js",
+    "scripts": {
+      "test": ""
+    },
+    "keywords": [
+      "Lottery",
+      "Orchejs REST",
+      "REST APIs"
+    ],
+    "author": "Mauricio Gemelli Vigolo",
+    "license": "MIT"
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
+
+Trace: 
+  Error: https://registry.yarnpkg.com/@orche%2frest: Not found
+      at Request.params.callback [as _callback] (/usr/local/lib/node_modules/yarn/lib/util/request-manager.js:326:18)
+      at Request.self.callback (/usr/local/lib/node_modules/yarn/node_modules/request/request.js:188:22)
+      at emitTwo (events.js:106:13)
+      at Request.emit (events.js:191:7)
+      at Request.<anonymous> (/usr/local/lib/node_modules/yarn/node_modules/request/request.js:1171:10)
+      at emitOne (events.js:96:13)
+      at Request.emit (events.js:188:7)
+      at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/yarn/node_modules/request/request.js:1091:12)
+      at IncomingMessage.g (events.js:292:16)
+      at emitNone (events.js:91:20)
