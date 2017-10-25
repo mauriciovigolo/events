@@ -1,16 +1,19 @@
-# Orchejs - REST APIs
+# Events
 
-## Apresentação FTSL 2017
+This repository holds the slides and source codes used in my presentations.
 
-Apresentação utilizada no FTSL 2017. Para rodar no seu browser basta abrir o arquivo index.html.
+## Roadmap
 
-## Sobre
+|Event|Date|Location|
+|-----|:----:|:--------:|
+|[REST APIs in Node.js using OrcheJS](./rest-apis-using-orchejs)|29/09/2017|[FTSL 2017](http://ftsl.org.br/)|
+|[REST APIs in Node.js using OrcheJS](./rest-apis-using-orchejs)|25/10/2017|SPEI University|
+
+## About me
 
 - Mauricio Gemelli Vigolo
-- Você pode me encontrar no twitter @mauriciovigolo, no slack: https://orchejs@slack.com ou github.
-- Link projeto: https://github.com/orchejs
-- Github apresentação e código fonte: https://github.com/mauriciovigolo/ftsl-2017
-
-## Aplicação utilizada para apresentação
-
-Esta apresentação foi feita utilizando-se do [Reveal.js](http://lab.hakim.se/reveal-js/). Recomendo a todos os que tiverem interesse, excelente projeto! 
+- Find me on:
+  - twitter @mauriciovigolo
+  - slack: https://orchejs@slack.com
+  - github: https://github.com/mauriciovigolo
+- OrcheJS on GitHub: https://github.com/orchejs
