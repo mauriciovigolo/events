@@ -2,9 +2,9 @@
 
 ## About
 
-In this event we will talk about creating REST APIs using OrcheJS, looking at examples of a traditional Express App, consuming a mongodb and the same application using [@orchejs/rest](https://github.com/orchejs/rest)
+In this event we will talk about creating REST APIs using OrcheJS, looking at examples of a traditional Express App consuming a mongodb and the same application using [@orchejs/rest](https://github.com/orchejs/rest).
 
-To check the presentation in your machine, open the index.html file inside of orchejs-slides.
+To run the slides in your machine, open the index.html file inside of orchejs-slides.
 
 -----
 - Author: Mauricio Gemelli Vigolo
